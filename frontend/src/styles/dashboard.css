@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f3f3f3;
+  color: #111;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* SIDEBAR (Amazon dark header style) */
+.sidebar {
+  width: 240px;
+  background: #232f3e;
+  color: white;
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+}
+
+.sidebar .logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff9900;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  padding: 12px;
+  margin-bottom: 6px;
+  color: #ddd;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.menu a:hover {
+  background: #37475a;
+  color: white;
+}
+
+/* MAIN */
+.main {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+}
+
+/* NAVBAR (Amazon top bar style) */
+.navbar {
+  background: #131921;
+  color: white;
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* CONTENT */
+.content {
+  padding: 25px;
+}
+
+/* CARD GRID (Amazon product style) */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  border-color: #ff9900;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #555;
+}
+
+.card h1 {
+  font-size: 26px;
+  margin-top: 10px;
+  color: #111;
+}
+
+/* INPUTS */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* BUTTON */
+button {
+  background: #ff9900;
+  border: none;
+  padding: 10px 14px;
+  color: black;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e68a00;
+}
+
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  margin-top: 15px;
+}
+
+th, td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+th {
+  background: #f7f7f7;
+  color: #333;
+}
+
+tr:hover {
+  background: #fafafa;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
