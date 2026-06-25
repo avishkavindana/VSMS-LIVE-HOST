@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "https://vsms-live-host-backend.onrender.com"
+  baseURL: "https://vsms-live-host-backend.onrender.com/api"
 });
